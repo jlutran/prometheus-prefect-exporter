@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "prometheus-prefect-exporter"
+version = "1.6.6"
+description = "A Prometheus exporter for Prefect metrics"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { file = "LICENSE" }
+keywords = ["prometheus", "prefect", "exporter"]
+authors = [{ name = "Prefect Technologies, Inc.", email = "help@prefect.io"}]
+classifiers = [
+    "Natural Language :: English",
+    "Intended Audience :: Developers",
+    "Intended Audience :: System Administrators",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries",
+]
+dependencies = ['prometheus_client==0.21.1', 'pendulum==3.0.0', 'prefect>=3.1.10']
+
+[project.urls]
+"Changelog" = "https://github.com/PrefectHQ/prometheus-prefect-exporter/releases"
+"Documentation" = "https://docs.prefect.io"
+"Source" = "https://github.com/PrefectHQ/prometheus-prefect-exporter"
+"Tracker" = "https://github.com/PrefectHQ/prometheus-prefect-exporter/issues"
+
+[project.scripts]
+prometheus-prefect-exporter = "main:metrics"
+
+[tool.setuptools]
+py-modules = []
